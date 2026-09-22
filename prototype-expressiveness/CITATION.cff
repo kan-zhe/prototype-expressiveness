@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper and this repository."
+type: software
+
+title: "Prototype Expressiveness"
+abstract: >-
+  Simulation code accompanying the paper "Less-Than-One-Shot Learning in
+  High-Dimensional Spaces": an affine upper-envelope illustration of
+  two-prototype soft-label expressiveness, and a dimension sweep showing that
+  while the constructed decision regions exist at every tested dimension, their
+  uniform measure collapses as the ambient dimension grows.
+# TODO: fill in before publishing.
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+# TODO: set once the repository is public.
+# repository-code: "https://github.com/<owner>/prototype-expressiveness"
+license: MIT
+keywords:
+  - clustering
+  - soft labels
+  - prototypes
+  - expressiveness
+  - distance ratio
+
+# TODO: fill in the authors, venue and DOI once the paper is published.
+# preferred-citation:
+#   type: article
+#   title: "Less-Than-One-Shot Learning in High-Dimensional Spaces"
+#   authors:
+#     - family-names: "TODO"
+#       given-names: "TODO"
+#   journal: "TODO"
+#   doi: "TODO"

@@ -1,0 +1,45 @@
+name: smoke
+
+# Cheap, network-free check that the simulation code runs.
+# make_rho_envelope.py is NOT run here: it fits a Gaussian KDE over 200k samples
+# in up to 50 dimensions and has no CLI to reduce the work.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  MPLBACKEND: Agg
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Dimension sweep (short run, scratch output)
+        run: |
+          python k_extension_experiment.py \
+            --dimensions 3,10 --k-values 3,10 --samples 5000 \
+            --output-dir results/check
+
+      - name: Assert the expected artefacts were produced
+        run: |
+          test -f results/check/k_extension_results.csv
+          test -f results/check/k_extension_dimension_heatmap_2.png

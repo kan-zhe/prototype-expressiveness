@@ -1,0 +1,12 @@
+# Runtime dependencies for the simulation scripts in this repository.
+# Python 3.11+ (developed and tested on CPython 3.13.9).
+#
+# Only these three packages are imported. There is no scikit-learn, no pandas,
+# no autodiff framework and no GPU dependency: the soft labels here are built in
+# closed form, and the gradients in the companion clustering code are hand-derived.
+#
+# Lower bounds are the versions the reported numbers were produced with.
+
+numpy>=2.3
+scipy>=1.16
+matplotlib>=3.10
