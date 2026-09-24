@@ -6,10 +6,10 @@ distance-ratio concentration that limits its high-dimensional visibility.
 Simulation code for the Experiments section of *Less-Than-One-Shot Learning in
 High-Dimensional Spaces*. Two self-contained scripts, one per experiment:
 
-| Script | Experiment | Figure |
-|---|---|---|
-| [`make_rho_envelope.py`](make_rho_envelope.py) | Illustrating the expressiveness of two prototypes | `upper_envelope.png` |
-| [`k_extension_experiment.py`](k_extension_experiment.py) | Dimension-dependent uniform coverage | `k_extension_dimension_heatmap_2.png` |
+| Script                                                   | Experiment                                        | Figure                                |
+| -------------------------------------------------------- | ------------------------------------------------- | ------------------------------------- |
+| [`make_rho_envelope.py`](make_rho_envelope.py)           | Illustrating the expressiveness of two prototypes | `upper_envelope.png`                  |
+| [`k_extension_experiment.py`](k_extension_experiment.py) | Dimension-dependent uniform coverage              | `k_extension_dimension_heatmap_2.png` |
 
 ## Scope: what these experiments do and do not show
 
@@ -107,13 +107,13 @@ check on the algebraic reduction rather than an empirical finding.
 
 Effective classes `R` recovered by uniform sampling, as `R/K`:
 
-| `d` | K=2 | K=3 | K=4 | K=5 | K=6 | K=8 | K=10 | K=20 |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 3 | 2/2 | 3/3 | 4/4 | 5/5 | 6/6 | 8/8 | 10/10 | 20/20 |
-| 5 | 2/2 | 3/3 | 4/4 | 5/5 | 6/6 | 8/8 | 9/10 | 10/20 |
-| 10 | 2/2 | 2/3 | 2/4 | 1/5 | 1/6 | 1/8 | 1/10 | 2/20 |
-| 20 | 1/2 | 1/3 | 1/4 | 1/5 | 1/6 | 1/8 | 1/10 | 1/20 |
-| 50 | 1/2 | 1/3 | 1/4 | 1/5 | 1/6 | 1/8 | 1/10 | 1/20 |
+| `d` | K=2 | K=3 | K=4 | K=5 | K=6 | K=8 | K=10  | K=20  |
+| ---:| ---:| ---:| ---:| ---:| ---:| ---:| -----:| -----:|
+| 3   | 2/2 | 3/3 | 4/4 | 5/5 | 6/6 | 8/8 | 10/10 | 20/20 |
+| 5   | 2/2 | 3/3 | 4/4 | 5/5 | 6/6 | 8/8 | 9/10  | 10/20 |
+| 10  | 2/2 | 2/3 | 2/4 | 1/5 | 1/6 | 1/8 | 1/10  | 2/20  |
+| 20  | 1/2 | 1/3 | 1/4 | 1/5 | 1/6 | 1/8 | 1/10  | 1/20  |
+| 50  | 1/2 | 1/3 | 1/4 | 1/5 | 1/6 | 1/8 | 1/10  | 1/20  |
 
 Targeted sampling — drawing points from inside every theoretically non-empty
 interval of `ρ` — recovers all `K` classes in all 40 configurations, including
@@ -169,7 +169,3 @@ produce it.
 ## License
 
 MIT — see [`LICENSE`](LICENSE).
-
-## Citation
-
-See [`CITATION.cff`](CITATION.cff). Please cite the paper if you use this code.
